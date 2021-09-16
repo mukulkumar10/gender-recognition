@@ -31,8 +31,7 @@ for i=1:n
  dummy=0;
  short_en=transpose(samp(:,i).*samp(:,i));
  for j=1:num_of_samples
- dummy=dummy+short_en(j);%Adding all the energy
-in the frame
+ dummy=dummy+short_en(j);%Adding all the energy in the frame
  end
  short_energy(i)=dummy;
  zcr_dummy=0;
@@ -45,8 +44,7 @@ in the frame
 end
 zcr_avg=mean((zcr_sum/2));%Taking the average zero
 crossing frequency of all the frames
-sum_short_avg=mean(short_energy);%Taking the average
-short energy of all the frames
+sum_short_avg=mean(short_energy);%Taking the average short energy of all the frames
 period=max(sum1);%Finding the period
 fundamental=fs/period;%Finding the fundamental
 frequency
